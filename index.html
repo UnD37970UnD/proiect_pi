@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Abateri Limita generale</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <header class="py-3 mb-4 border-bottom">
+        <div class="container d-flex flex-wrap justify-content-center">
+          <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4">Calculator abateri limita generale</span>
+          </a>
+          <div class="col-12 col-lg-auto mb-3 mb-lg-0 d-flex align-middle align-items-center">
+            <h4 class="fs-6 align-middle align-items-center">Ivan Iustin - 622AB - uni project</h4>
+          </div>
+        </div>
+      </header>
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row g-5 py-5">
+            
+            <div class="col-10 col-sm-8 col-lg-6">
+                <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-3">Completează datele de intrare</h1>
+            <form class="calc">
+                <div class="mb-3">
+                  <label for="clasa_toleranta" class="form-label">Clasa de tolerantă</label>
+                  <select class="form-select" aria-label="Default select example" id="clasa_toleranta">
+                    <option value="f">f - Fină</option>
+                    <option value="m">m - Mijlocie</option>
+                    <option value="c">c - Grosieră</option>
+                    <option value="v">v - Grosolană</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="d_nominala" class="form-label">Dimensiunea nominală (mm)</label>
+                  <input type="number" class="form-control" id="d_nominala" step=any max="565" min="5">
+                  <label for="d_nominala" class="form-label fs-6">Scrie un numar cuprins intre 5 si 565 mm.</label>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="tesitura">
+                  <label class="form-check-label" for="tesitura">Doresc sa aflu abaterea limtă a teșiturilor</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Calculeaza</button>
+              </form>
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-6 fw-bold text-body-emphasis lh-1 mb-3">Abaterea limita generala: <br><span id="rezultat" class="display-6 fw-semibold align-middle"></span></h1>
+
+              </div>
+        </div>
+      </div>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"
+    ></script>
+    <script src="program.js"
+    ></script>
+  </body>
+</html>
