@@ -36,12 +36,13 @@ form.addEventListener('submit', (e) => {
                     
                 }
             }
-                 
+            console.log(clasa_tol.value + " " + d_nom.value + " " + tes.checked); 
         }
-    else
+    else if (!tes.checked)
         {
+            console.log(clasa_tol.value + " " + d_nom.value);
             switch(clasa_tol.value){
-                case "f":{
+                case 'f':
                     if(d_nom.value > 3 && d_nom.value <=6)
                         rezultat.innerText = "±0,05 mm";
                     else if (d_nom.value > 6 && d_nom.value <=30)
@@ -52,8 +53,8 @@ form.addEventListener('submit', (e) => {
                         rezultat.innerText = "±0,2 mm";
                     else if (d_nom.value > 400 && d_nom.value <=565)
                         rezultat.innerText = "±0,3 mm";
-                }
-                case "m":{
+                break;
+                case 'm':
                     if(d_nom.value > 3 && d_nom.value <=6)
                         rezultat.innerText = "±0,1 mm";
                     else if (d_nom.value > 6 && d_nom.value <=30)
@@ -64,8 +65,8 @@ form.addEventListener('submit', (e) => {
                         rezultat.innerText = "±0,5 mm";
                     else if (d_nom.value > 400 && d_nom.value <=565)
                         rezultat.innerText = "±0,8 mm";
-                }
-                case "c":{
+                break;
+                case 'c':
                     if(d_nom.value > 3 && d_nom.value <=6)
                         rezultat.innerText = "±0,3 mm";
                     else if (d_nom.value > 6 && d_nom.value <=30)
@@ -76,8 +77,8 @@ form.addEventListener('submit', (e) => {
                         rezultat.innerText = "±1,2 mm";
                     else if (d_nom.value > 400 && d_nom.value <=565)
                         rezultat.innerText = "±2 mm";
-                }
-                case "v":{
+                break;
+                case 'v':
                     if(d_nom.value > 3 && d_nom.value <=6)
                         rezultat.innerText = "±0,5 mm";
                     else if (d_nom.value > 6 && d_nom.value <=30)
@@ -88,7 +89,7 @@ form.addEventListener('submit', (e) => {
                         rezultat.innerText = "±2,5 mm";
                     else if (d_nom.value > 400 && d_nom.value <=565)
                         rezultat.innerText = "±4 mm";
-                }
+                break;
             }
         }
         
